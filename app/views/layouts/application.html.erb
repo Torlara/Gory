@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gory</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -16,13 +16,13 @@
           <%= link_to "sample app", '#', id: "logo" %>
           <nav>
             <ul class="nav pull-right">
-              <li><%= link_to "Aktualnosci",    news_path %></li>
-              <li><%= link_to "O nas",    about_path %></li>
-              <li><%= link_to "Zdobyte szczyty", peaks_path %></li>
-              <li><%= link_to "Historia", archive_path %></li>
-              <li><%= link_to "Galeria", gallery_path %></li>
-              <li><%= link_to "Wywiady", interviews_path %></li>
-              <li><%= link_to "Kontakt", contact_path %></li>
+            	<li><%= link_to "Aktualnosci",    news_path %></li>                
+            	<li><%= link_to "O nas",    about_path %></li>                
+            	<li><%= link_to "Zdobyte szczyty", peaks_path %></li>                
+            	<li><%= link_to "Historia", archive_path %></li>               
+            	<li><%= link_to "Galeria", gallery_path %></li>                
+            	<li><%= link_to "Wywiady", interviews_path %></li>                
+				<li><%= link_to "Kontakt", contact_path %></li>
             </ul>
           </nav>
         </div>
@@ -32,5 +32,6 @@
       <%= yield %>
      <%= debug(params) if Rails.env.development? %>
     </div>
+    <%= render 'layouts/footer'%>
   </body>
 </html>
