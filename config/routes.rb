@@ -3,29 +3,18 @@ GoryV01ok::Application.routes.draw do
   root :to => "static_pages#news"
   
   get "static_pages/news"
-
   get "static_pages/about"
-
   get "static_pages/peaks"
-
   get "static_pages/archive"
-
   get "static_pages/gallery"
-
   get "static_pages/interviews"
-
   get "static_pages/contact"
 
   resources :comments
-
-
   resources :multimedia
-
-
   resources :posts
-
-
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   
   match '/news', to: 'static_pages#news'
   match '/about', to: 'static_pages#about' 
@@ -34,6 +23,9 @@ GoryV01ok::Application.routes.draw do
   match '/gallery', to: 'static_pages#gallery' 
   match '/interviews', to: 'static_pages#interviews' 
   match '/contact', to: 'static_pages#contact'  
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
