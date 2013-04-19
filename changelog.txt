@@ -1,0 +1,15 @@
+Maciek 19-04-2013:
+- wywalony index.html, działa root
+- dodany remember_token do tabeli User w bazie danych
+- dodana prywatna metoda create_remember_token w modelu usera 
+- dodane metody do logowania i wylogowywania w helperze SessionsHelper
+- poprawiłem kod layoutow - dodalem partiala _header i teraz wykorzystuje go teraz application.html.erb
+- wywaliłem ten napis SAMPLE APP z lewego górnego rogu
+- w app/assets/javascripts/application.js dodałem //= require bootstrap (wymagane do dropdown menu w _headerze)
+- dodałem przykładowego użytkownika (do testowania logowania):
+	name: Ktos
+	surname: Ktosiecki
+	email: ktos@cos.pl
+	haslo: hasloo
+- dodałem dynamicznie zmieniający się tytuł odwiedzanych stron
+- przetłumaczyłem co się dało (nie wiedziałem jak przetłumaczyć ten formularz logowania)
