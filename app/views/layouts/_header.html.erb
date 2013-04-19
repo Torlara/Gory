@@ -1,0 +1,44 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <!--<%= link_to "sample app", '#', id: "logo" %> -->
+          <nav>
+            <ul class="nav pull-right">
+            	<li><%= link_to "Aktualnosci",    news_path %></li>                
+            	<li><%= link_to "O nas",    about_path %></li>                
+            	<li><%= link_to "Zdobyte szczyty", peaks_path %></li>                
+            	<li><%= link_to "Historia", archive_path %></li>               
+            	<li><%= link_to "Galeria", gallery_path %></li>                
+            	<li><%= link_to "Wywiady", interviews_path %></li>                
+				<li><%= link_to "Kontakt", contact_path %></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				
+			<% if signed_in? %>
+				<li id="fat-menu" class="dropdown">
+              		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                		Moje konto <b class="caret"></b>
+              		</a>
+              			<ul class="dropdown-menu">
+                			<li><%= link_to "Profil", current_user %></li>
+                			<li><%= link_to "Ustawienia", '#' %></li>
+                			<li><%= link_to "Dodaj newsa", '#' %></li>
+                			<li><%= link_to "Dodaj zdjęcie", '#' %></li>
+                			<li><%= link_to "Dodaj film", '#' %></li>
+                			<li><%= link_to "<<inne zabawki zalogowanego>>", '#' %></li>
+                			<li><%= link_to "Ustawienia konta", '#' %></li>
+                			<li class="divider"></li>
+                			<li>
+                  				<%= link_to "Wyloguj się", signout_path, method: "delete" %>
+                			</li>
+              			</ul>
+              	</li>
+             <% else %>
+             <li><%= link_to image_tag("login.png"), signin_path %></li>
+             <% end %>
+           </ul>
+          </nav>
+        </div>
+      </div>
+    </header>

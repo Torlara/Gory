@@ -1,0 +1,27 @@
+<h1>Listing multimedia</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Source</th>
+    <th>Tag</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @multimedia.each do |multimedium| %>
+  <tr>
+    <td><%= multimedium.name %></td>
+    <td><%= multimedium.source %></td>
+    <td><%= multimedium.tag %></td>
+    <td><%= link_to 'Show', multimedium %></td>
+    <td><%= link_to 'Edit', edit_multimedium_path(multimedium) %></td>
+    <td><%= link_to 'Destroy', multimedium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Multimedium', new_multimedium_path %>
