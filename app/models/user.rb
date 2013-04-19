@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   #validacje
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
-
+  
   validates(:name, presence: true, length: {maximum: 35})
   validates(:surname, presence: true, length: {maximum: 35})
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -31,9 +31,9 @@ class User < ActiveRecord::Base
   #polaczenia w bazie
   has_many :posts
   
-  
   private
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64
   end
+  
 end
