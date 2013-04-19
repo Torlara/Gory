@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <title><%= full_title(yield(:title)) %></title>
+=======
+    <title>Gory</title>
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -12,7 +16,32 @@
   </head>
   <body>
   	<%= image_tag("logo.jpg", :class => "img") %>
+<<<<<<< HEAD
     <%= render 'layouts/header'%>
+=======
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "sample app", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+            	<li><%= link_to "Aktualnosci",    news_path %></li>                
+            	<li><%= link_to "O nas",    about_path %></li>                
+            	<li><%= link_to "Zdobyte szczyty", peaks_path %></li>                
+            	<li><%= link_to "Historia", archive_path %></li>               
+            	<li><%= link_to "Galeria", gallery_path %></li>                
+            	<li><%= link_to "Wywiady", interviews_path %></li>                
+				<li><%= link_to "Kontakt", contact_path %></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li><%= link_to image_tag("login.png"), signin_path %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
     <div class="container">
       <%= yield %>
      <%= debug(params) if Rails.env.development? %>

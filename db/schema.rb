@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130419115501) do
+=======
+ActiveRecord::Schema.define(:version => 20130415111117) do
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -45,9 +49,14 @@ ActiveRecord::Schema.define(:version => 20130419115501) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
+<<<<<<< HEAD
     t.string   "remember_token"
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
+=======
+  end
+
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
 end

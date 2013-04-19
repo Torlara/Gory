@@ -9,7 +9,10 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string(255)
+<<<<<<< HEAD
 #  remember_token  :string(255)
+=======
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
 #
 
 class User < ActiveRecord::Base
@@ -18,8 +21,11 @@ class User < ActiveRecord::Base
   
   #validacje
   before_save { |user| user.email = email.downcase }
+<<<<<<< HEAD
   before_save :create_remember_token
   
+=======
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
   validates(:name, presence: true, length: {maximum: 35})
   validates(:surname, presence: true, length: {maximum: 35})
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -30,10 +36,13 @@ class User < ActiveRecord::Base
   
   #polaczenia w bazie
   has_many :posts
+<<<<<<< HEAD
   
   
   private
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64
   end
+=======
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
 end

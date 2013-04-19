@@ -9,7 +9,10 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string(255)
+<<<<<<< HEAD
 #  remember_token  :string(255)
+=======
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
 #
 
 require 'test_helper'

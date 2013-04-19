@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <% provide(:title, "Zaloguj się") %>
 <h1>Zaloguj się</h1>
+=======
+<% provide(:title, "Sign in") %>
+<h1>Sign in</h1>
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
 
 <div class="row">
   <div class="span6 offset3">
@@ -15,9 +20,16 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
+<<<<<<< HEAD
       <%= f.submit "Zaloguj się", class: "btn btn-large btn-primary" %>
     <% end %>
 
     <p>Jesteś tu nowy? <%= link_to "Utwórz konto!", signup_path %></p>
+=======
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+>>>>>>> 60a746404b5802cc3eef893f2a73684c70e89d5c
   </div>
 </div>
