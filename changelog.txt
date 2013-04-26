@@ -1,0 +1,35 @@
+Maciek 23-04-2013:
+- dodana edycja danych konta
+- do testów bezpieczeństwa zrobiłem nowego użytkownika:
+	name: Zbycho
+	surname: Zbyszewski
+	email: zbychu@cos.pl
+	haslo: tajnosc
+- dodana edycja konta z zabezpieczeniami - nie można teraz z pasku adresu wjechać na żadną z akcji kontrolera user bez zalogowania się
+- zalogowany użytkownik, wpisując w pasku adresu np. users/<nie swój nr>/<show albo edit> również nie moze przeglądać ani edytować nie swoich danych
+- cfaniakowanie z paskiem adresu -> "Zaloguj się" jak nie jest zalogowany, tylko swój "show" jak jest zalogowany
+- drobne poprawki wizualne w widoku i edycji konta (można potem lepiej upiększyć)
+- dodałem folder app/views/shared, gdzie będą partiale wykorzystywane do całej aplikacji
+- dodałem do ^ tego folderu partiala _error_messages.html.erb, żeby informacje o błędach wypisywane były ładnie (będzie wymagało później tłumaczenia - nie takie trywialne)
+- przeniosłem cały kod css z comments.css.scss do custom.css.scss
+
+Maciek 19-04-2013:
+- wywalony index.html, działa root
+- dodany remember_token do tabeli User w bazie danych
+- dodana prywatna metoda create_remember_token w modelu usera 
+- dodane metody do logowania i wylogowywania w helperze SessionsHelper
+- poprawiłem kod layoutow - dodalem partiala _header i teraz wykorzystuje go teraz application.html.erb
+- wywaliłem ten napis SAMPLE APP z lewego górnego rogu
+- w app/assets/javascripts/application.js dodałem //= require bootstrap (wymagane do dropdown menu w _headerze)
+- dodałem przykładowego użytkownika (do testowania logowania):
+	name: Ktos
+	surname: Ktosiecki
+	email: ktos@cos.pl
+	haslo: hasloo
+- dodałem dynamicznie zmieniający się tytuł odwiedzanych stron
+- przetłumaczyłem co się dało (nie wiedziałem jak przetłumaczyć ten formularz logowania)
+
+Miłka 23-04-2013:
+- dodana galeria dla zdobytych szczytów (javascripty, cssy)
+- dodany kontakt (css)
+- logo wrzucone do gory

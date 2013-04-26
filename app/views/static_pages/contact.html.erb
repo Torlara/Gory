@@ -1,0 +1,31 @@
+<% provide(:title, 'Kontakt') %>
+
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<link href='http://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'>
+
+<h1>Kontakt</h1>
+<div class="contact-us container">
+            <div class="row">
+                <div class="contact-form span7">
+                    <p>Masz do nas jakieś pytania? Chciałbyś zostać członkiem koła? Wypełnij poniższy formularz i wyślij nam wiadomość, odpiszemy najszybciej jak to możliwe.</p>
+                    <form method="post" action="/assets/sendmail.php">
+                        <label for="name" class="nameLabel">Imię</label>
+                          <input id="name" type="text" name="name" placeholder="Podaj swoje imię...">
+                        <label for="email" class="emailLabel">Email</label>
+                          <input id="email" type="text" name="email" placeholder="Podaj swój email...">
+                        <label for="subject">Temat</label>
+                          <input id="subject" type="text" name="subject" placeholder="Tytuł wiadomości...">
+                        <label for="message" class="messageLabel">Treść</label>
+                          <textarea id="message" name="message" placeholder="Twoja wiadomość..."></textarea>
+                        <button type="submit">Wyślij</button>
+                    </form>
+                </div>
+                <div class="contact-address span5">
+                    <h4>Jesteśmy tutaj</h4>
+                    <div class="map"><img src="http://maps.google.com/maps/api/staticmap?size=400x362&maptype=roadmap&sensor=false&markers=color:green|label:A|Politechnika Wrocławska" alt=""></img></div>
+                    <h4>Adres</h4>
+                    <p>Stanisława Wyspiańskiego 27 <br> budynek B-4, sala 4.09 <br> 50-307, Wrocław, Polska</p>
+                    <p>Telefon: 123 456 789</p>
+                </div>
+            </div>
+        </div>

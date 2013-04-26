@@ -1,0 +1,26 @@
+<% provide(:title, "Dane konta") %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Dane konta</h1>
+
+<div class="span6 offset3">
+	<p>
+  		<b>Imię: </b>
+  		<%= @user.name %>
+	</p>
+
+	<p>
+  		<b>Nazwisko:</b>
+  		<%= @user.surname %>
+	</p>
+
+	<p>
+  		<b>Email:</b>
+  		<%= @user.email %>
+	</p>
+
+<p></p>
+<%= link_to 'Edytuj dane', edit_user_path(@user), class: "btn btn-large btn-secondary" %>
+
+</div>
